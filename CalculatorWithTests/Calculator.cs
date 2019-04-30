@@ -11,29 +11,35 @@ namespace CalculatorWithTests
     {
        public int Add(int number1, int number2)
         {
-            throw new NotImplementedException();
+            return (number1 + number2);
         }
 
 
         public double Subtract(double minuend,  double subtrahend)
         {
-            throw new NotImplementedException();
+            return(minuend-subtrahend);
         }
 
         public long  Multiply(long factor1,long factor2)
         {
-            throw new NotImplementedException();
+            return(factor1 * factor2);
         }
 
         public double Divide(double num1, double num2)
         {
-            throw new NotImplementedException();
+            return (num1 / num2);
         }
 
-        public int factorial(int num1)
+        public int factorial(int number1)
         {
-            throw new NotImplementedException();
-        }
+            int fact = 1;
+            for (int i = 1; i <= number1; i++)
+
+            {
+                fact = fact * i;
+            }
+            return fact;       
+        }  
 
     }
 }

@@ -24,10 +24,10 @@ namespace CalculatorWithTests.Tests
 
         }
         [Theory]
-        [InlineData(10, 7, 10)]
+        [InlineData(10, 7, 3)]
         [InlineData(2, 2, 0)]
-        [InlineData(3, 4, -1)]
-        [InlineData(20, -2, 18)]
+        [InlineData(6,5,1)]
+        [InlineData(20, 2, 18)]
         public void Subtract(double minuend, double subtrahend, double expectedDifference)
         { //Arrange
             Calculator calculatortest = new Calculator();
@@ -43,7 +43,7 @@ namespace CalculatorWithTests.Tests
         [InlineData(10, 7, 70)]
         [InlineData(2, 2, 4)]
         [InlineData(3, 4, 12)]
-        [InlineData(4, 22, 8)]
+        [InlineData(4, 2, 8)]
         public void Multiply(long number1, long number2, long expectedProduct)
         { //Arrange
             Calculator calculatortest = new Calculator();
@@ -56,7 +56,7 @@ namespace CalculatorWithTests.Tests
 
         }
         [Theory]
-        [InlineData(10, 7, 17)]
+        [InlineData(10, 2, 5)]
         [InlineData(2, 2, 1)]
         [InlineData(10, 5, 2)]
         [InlineData(20, 4, 5)]
@@ -76,7 +76,7 @@ namespace CalculatorWithTests.Tests
         [InlineData(4,24)]
         [InlineData(3,6)]
         [InlineData(5,120)]
-        public void factorial(int number1,int expectedfact)
+        public void Factorial(int number1, int expectedfact)
         { //Arrange
             Calculator calculatortest = new Calculator();
 
@@ -85,6 +85,7 @@ namespace CalculatorWithTests.Tests
 
             //Assert
             Assert.Equal(expectedfact, actual);
+            
 
         }
     }
