@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using CalculatorWithTests;
 
 
 namespace CalculatorWithTests.Tests
@@ -14,7 +15,7 @@ namespace CalculatorWithTests.Tests
         public void Add(int number1, int number2, int expectedSum)
         { //Arrange
             Calculator calculatortest = new Calculator();
-
+            
             //Act
             int actual = calculatortest.Add(number1, number2);
 
