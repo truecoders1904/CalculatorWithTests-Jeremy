@@ -39,51 +39,51 @@ namespace CalculatorWithTests.Tests
 
         }
         [Theory]
-        [InlineData(10, 7, 17)]
+        [InlineData(10, 7, 70)]
         [InlineData(2, 2, 4)]
-        [InlineData(3, 4, 7)]
-        [InlineData(-2, -2, -4)]
-        public void Multiply(int number1, int number2, int expectedSum)
+        [InlineData(3, 4, 12)]
+        [InlineData(4, 22, 8)]
+        public void Multiply(long number1, long number2, long expectedProduct)
         { //Arrange
             Calculator calculatortest = new Calculator();
 
             //Act
-            int actual = calculatortest.Add(number1, number2);
+            long actual = calculatortest.Multiply(number1, number2);
 
             //Assert
-            Assert.Equal(expectedSum, actual);
+            Assert.Equal(expectedProduct, actual);
 
         }
         [Theory]
         [InlineData(10, 7, 17)]
-        [InlineData(2, 2, 4)]
-        [InlineData(3, 4, 7)]
-        [InlineData(-2, -2, -4)]
-        public void Divide(int number1, int number2, int expectedSum)
+        [InlineData(2, 2, 1)]
+        [InlineData(10, 5, 2)]
+        [InlineData(20, 4, 5)]
+        public void Divide(double number1, double number2, double expectedquotient)
         { //Arrange
             Calculator calculatortest = new Calculator();
 
             //Act
-            int actual = calculatortest.Add(number1, number2);
+            double actual = calculatortest.Divide(number1, number2);
 
             //Assert
-            Assert.Equal(expectedSum, actual);
+            Assert.Equal(expectedquotient, actual);
 
         }
         [Theory]
-        [InlineData(10, 7, 17)]
-        [InlineData(2, 2, 4)]
-        [InlineData(3, 4, 7)]
-        [InlineData(-2, -2, -4)]
-        public void favtorial(int number1, int number2, int expectedSum)
+        [InlineData(2,2)]
+        [InlineData(4,24)]
+        [InlineData(3,6)]
+        [InlineData(5,120)]
+        public void factorial(int number1,int expectedfact)
         { //Arrange
             Calculator calculatortest = new Calculator();
 
             //Act
-            int actual = calculatortest.Add(number1, number2);
+            int actual = calculatortest.factorial(number1);
 
             //Assert
-            Assert.Equal(expectedSum, actual);
+            Assert.Equal(expectedfact, actual);
 
         }
     }
