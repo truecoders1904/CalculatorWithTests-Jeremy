@@ -23,19 +23,19 @@ namespace CalculatorWithTests.Tests
 
         }
         [Theory]
-        [InlineData(10, 7, 17)]
-        [InlineData(2, 2, 4)]
-        [InlineData(3, 4, 7)]
-        [InlineData(-2, -2, -4)]
-        public void Subtract(int number1, int number2, int expectedSum)
+        [InlineData(10, 7, 10)]
+        [InlineData(2, 2, 0)]
+        [InlineData(3, 4, -1)]
+        [InlineData(20, -2, 18)]
+        public void Subtract(double minuend, double subtrahend, double expectedDifference)
         { //Arrange
             Calculator calculatortest = new Calculator();
 
             //Act
-            int actual = calculatortest.Add(number1, number2);
+            double actual = calculatortest.Subtract(minuend , subtrahend);
 
             //Assert
-            Assert.Equal(expectedSum, actual);
+            Assert.Equal(expectedDifference, actual);
 
         }
         [Theory]
